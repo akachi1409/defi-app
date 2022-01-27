@@ -1,0 +1,48 @@
+.followBtn-layout{
+    width: 65%;
+    max-width: 65%;
+    display:flex;
+    margin: auto;
+}
+@media (max-width: 1024px){
+    .followBtn-layout{
+        width: 154px;
+        max-width: 154px;
+        display:flex;
+        margin: auto;
+        margin-top: 5em;
+    }
+}
+@media (max-width: 767px){
+    .followBtn-layout{
+        width: 139px;
+        max-width: 139px;
+        display:flex;
+        margin: auto;
+        
+    }
+}
+.followBtn-container{
+    background-image:url('../../../assets/img/basic/followBtnLayout.png');
+    background-position: 3px -1px;
+    background-repeat: no-repeat;
+    background-size: 95% auto;
+}
+
+.followBtn-container .followBtn-link{
+    font-family: "Helvetica", Sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    fill: #000000;
+    color: #000000;
+    background-color: #61CE7000;
+
+    padding: 20px 40px;
+    border-radius: 5px;
+    width: auto;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+.chain-bg{
+    background-image:url(../../assets/img/wallet/bg-1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:100vh;
+}
+
+.chain-right-bg{
+    background-color: rgb(16, 123, 245);
+    display: flex;
+    align-items: center;
+}
+
+.chain-right-bg .chain-list{
+    text-align: center;
+    align-items: center;
+}
+
+.chain-right-bg .chain-list .chain-item{
+    width: 30%;
+    margin: 1em ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.chain-right-bg .chain-list .chain-item-selected{
+    width: 30%;
+    margin: 1em ;
+    border-radius: 20px;
+    background-color: wheat;
+}

@@ -1,0 +1,17 @@
+.connect-item .wallet-title{
+    margin-bottom: 5px;
+    color: green;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 2em;
+}
+
+.connect-item .wallet-icon{
+    width: 48px;
+    height: 48px;
+}
+.connect-item{
+    margin-bottom: 1em;
+    border-radius: 20px !important;
+}

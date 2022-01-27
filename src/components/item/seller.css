@@ -1,0 +1,63 @@
+.seller-container{
+    background-color: #000000;
+    overflow: hidden;
+}
+.seller-container .seller-layout{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1140px;
+    flex-direction: column;
+}
+.seller-title-layout{
+    overflow: hidden;
+    padding: 30px 0px 0px 0px;
+}
+.seller-title-layout .seller-title{
+    color: #FFFFFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 3.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+.seller-title-layout .seller-title-text{
+    color: #FFFFFFCC;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.8em;
+}
+
+.seller-box-layout{
+    overflow: hidden;
+    padding: 0px 0px 50px 0px;
+    width: 100%;
+    position: relative;
+}
+
+.seller-box-layout .seller-box{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .seller-box-layout .seller-box{
+        width: 33.333%;
+    }
+}
+
+.seller-box-layout .seller-box .seller-box-container{
+    margin: 14px 14px 14px 14px;
+    --e-column-margin-right: 14px;
+    --e-column-margin-left: 14px;
+    background-color: #97979729;
+}
+.seller-box-layout .seller-box .seller-box-container .seller-box-wrap{
+    padding: 25px 25px 25px 25px;
+    display: flex;
+    flex-direction: column;
+}

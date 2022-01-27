@@ -1,0 +1,61 @@
+.authorTile-container{
+    
+}
+.authorTile-container .authorTile-border{
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FFFFFFD1;
+    margin: 10px 10px 10px 10px;
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap{
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout{
+    margin-bottom: 10px
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout .authorTile-article-image figure img{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    display: block;
+}
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout .authorTile-article-text{
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0px;
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout .authorTile-article-text .authorTile-article-name{
+    color: #FFFFFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.2em;
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout .authorTile-article-text .authorTile-article-position{
+    color: #FFFFFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 1.5em;
+}
+
+.authorTile-container .authorTile-border .authorTile-wrap .authorTile-article-layout .authorTile-article-text .authorTile-article-p{
+    color: #FFFFFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.5em;
+}

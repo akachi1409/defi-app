@@ -1,0 +1,70 @@
+.nft-layout{
+    background-color: #000000; 
+    background-image: url('../../assets/img/basic/nft/nft-overlay.png');
+    background-position: top center;
+    background-size: cover;
+    min-height: 1000px;
+}
+
+.nft-layout .nft-layout-overlay{
+    background-color: #000000;
+    opacity: 1;
+    width: 100%;
+    top: 450px;
+    left: 0;
+    position: absolute;
+    z-index:0;
+    min-height: 1000px;
+}
+
+.nft-layout .nft-layout-container{
+    width: 100%;
+    top: 500px;
+    left: 0;
+    position: absolute;
+    z-index:0;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nft-layout .nft-layout-container .nft-layout-form .form-group{
+    margin-bottom: 50px;
+}
+.nft-layout .nft-layout-container .nft-layout-form .nft-submit-layout{
+    display: flex;
+    margin-bottom:60px
+}
+.nft-layout .nft-layout-container .nft-layout-form .nft-submit-layout:hover{
+    padding-bottom:20px
+}
+.nft-layout .nft-layout-container .nft-layout-form .nft-submit-button{
+    padding:15px 25px;
+    margin: auto;
+}
+.nft-layout .nft-layout-container .nft-layout-form label{
+    color: white;
+}
+
+.nft-layout .nft-layout-container .nft-layout-form input{
+    background-color:rgb(23,13,21);
+    border-color: black;
+}
+.nft-layout .nft-layout-container .nft-layout-form textarea{
+    background-color:rgb(23,13,21);
+    border-color: black;
+}
+.nft-layout .nft-layout-container .nft-layout-form .nft-label{
+    color:white;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nft-layout .nft-layout-container .nft-layout-form .nft-submit-text{
+    font-family: "Helvetica", Sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    border-radius: 2px 2px 2px 2px;
+}

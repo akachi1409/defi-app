@@ -1,0 +1,59 @@
+.itemHeader-contanier{
+    background-color: #000000;
+    background-image: url('../../../assets/img/basic/header/item-header.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+.itemHeader-contanier .itemHeader-overlay{
+    background-color: #000000;
+    opacity: 0.5;
+    /* min-height: 500px; */
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index:0;
+}
+.itemHeader-contanier .itemHeader-layout{
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    margin:auto;
+    display:flex;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.itemHeader-contanier .itemHeader-layout .itemHeader-title{
+    color: #FFFFFF;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.itemHeader-contanier .itemHeader-layout .itemHeader-text{
+    color: #FFFFFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+.itemHeader-contanier .itemHeader-layout .itemHeader-href{
+    font-family: "Helvetica", Sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #BDEFC400;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FFFFFF87;
+    border-radius: 0px 0px 0px 0px;
+
+    font-size: 16px;
+    padding: 15px 30px;
+    color:white;
+}

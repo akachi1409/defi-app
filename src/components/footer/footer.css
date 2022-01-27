@@ -1,0 +1,22 @@
+.footer-control {
+    background-color: black;
+    color: white;
+    
+}
+
+.footer {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer p {
+    margin: 0px;
+    letter-spacing: 3px;
+}
+
+.footer div svg {
+    margin-left: 20px;
+}

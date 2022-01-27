@@ -1,0 +1,38 @@
+.header-container{
+    background-color: #101420;
+}
+
+.header-container .header-logo{
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    width:100%;
+    position: relative;
+}
+
+.header-container .header-menu{
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    width:100%;
+    position: relative;
+}
+.header-container .header-menu .header-menu-item{
+    position: relative;
+    float: left;
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header-container .header-menu .header-menu-item .header-menu-link{
+    text-decoration: none;
+    color:white;
+
+    font-family: "Helvetica", Sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    padding: 10px 20px 10px 20px;
+}
