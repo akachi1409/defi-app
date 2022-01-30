@@ -1,4 +1,5 @@
 // log
+import axios from "axios";
 import store from "../store";
 
 const fetchDataRequest = () => {
@@ -38,26 +39,30 @@ export const fetchData = (account) => {
         .getState()
         .blockchain.smartContract.methods.walletOfOwner(account)
         .call();
-      let tokenData = []
+      let tokenUrls = []
       for ( var index = 0 ; index<tokenIds.length; index++){
         let temp = await store
           .getState()
           .blockchain.smartContract.methods.tokenURI(tokenIds[index])
           .call();
+        tokenUrls.push(temp);
+      }
+      let tokenData = []
+      for (var index = 0 ; index<tokenUrls.length; index++){
+        let temp = await axios.get(tokenUrls[index])
+          .then((res) => {
+              return res.data;
+          })
         tokenData.push(temp);
       }
-      // let cost = await store
-      //   .getState()
-      //   .blockchain.smartContract.methods.cost()
-      //   .call();
-
       dispatch(
         fetchDataSuccess({
           name,
           totalSupply,
           cost,
           tokenIds,
-          tokenData
+          tokenData, 
+          tokenUrls
         })
       );
     } catch (err) {

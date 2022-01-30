@@ -5,6 +5,7 @@ const initialState = {
   cost: 0,
   tokenIds: [],
   tokenData:[],
+  tokenUrls:[],
   error: false,
   errorMsg: "",
 };
@@ -27,6 +28,7 @@ const dataReducer = (state = initialState, action) => {
         cost: action.payload.cost,
         tokenIds: action.payload.tokenIds,
         tokenData: action.payload.tokenData,
+        tokenUrls: action.payload.tokenUrls,
         error: false,
         errorMsg: "",
       };
