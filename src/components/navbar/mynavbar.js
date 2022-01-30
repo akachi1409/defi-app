@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Container, Navbar, Nav, Button, Modal, ListGroup } from "react-bootstrap";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Container, Navbar, Nav, Button, Modal, ListGroup, NavDropdown } from "react-bootstrap";
+import { useLocation, useHistory } from "react-router-dom";
 import "./mynavbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "../../redux/blockchain/blockchainActions";
@@ -9,17 +9,39 @@ import { fetchData } from "../../redux/data/dataActions";
 import Metamask from "../../assets/img/wallet/metamask.png"
 import WalletConnect from "../../assets/img/wallet/walletconnect-logo.png"
 function Mynavbar() {
+
   const [route, setRoute] = useState(0);
   const location = useLocation();
 
+  let history = useHistory();
+  function handleClick(route) {
+    history.push(route);
+  }
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
+  const data = useSelector((state) => state.data);
+  const getData = () => {
+      if (blockchain.account !== "" && blockchain.smartContract !== null) {
+          dispatch(fetchData(blockchain.account));
+      }
+  };
+
+  useEffect(() => {
+      getData();
+  }, [blockchain.account]);
+  // const notify = (msg) => toast(msg); 
+
+  // useEffect(() =>{
+  //     if (blockchain.errorMsg !=="")
+  //         notify(blockchain.errorMsg);
+  // }, [blockchain.errorMsg])
+
   React.useEffect(() => {
-    console.log("Location changed", location.pathname);
     switch (location.pathname) {
       case "/author":
         setRoute(1);
@@ -46,28 +68,33 @@ function Mynavbar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto" activeKey={route}>
-              <Nav.Link href="/author" eventKey="1">
+              <Nav.Link onClick={()=>handleClick("/author")} eventKey="1">
                 Author
               </Nav.Link>
-              <Nav.Link href="/generator" eventKey="2">
+              <Nav.Link onClick={()=>handleClick("/generator")}  eventKey="2">
                 NFT Generator
               </Nav.Link>
-              <Nav.Link href="/item" eventKey="3">
+              <Nav.Link onClick={()=>handleClick("/item")} eventKey="3">
                 NFT Item
               </Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
+              {
+              blockchain.account === "" || blockchain.account === null ? 
+                null:
+                <NavDropdown title="Profile" id="collasible-nav-dropdown">
+                  <NavDropdown.Item onClick={()=>handleClick("/mynft")}>My NFT</NavDropdown.Item>
+                  <NavDropdown.Item href="#">
+                    Test
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
+                  <NavDropdown.Item href="#">
+                    Test
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
+                  <NavDropdown.Item href="#">
+                    Test
                   </NavDropdown.Item>
-                </NavDropdown> */}
+                </NavDropdown>
+              }
+              
             </Nav>
             <Nav>
             {

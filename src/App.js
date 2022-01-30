@@ -9,6 +9,7 @@ import Auth from './page/Auth';
 import NFTGenerator from './page/NFTGenerator'
 import ItemPage from './page/ItemPage'
 import Chain from "./page/Chain/Chain"
+import MyNFT from './page/MyNFT/MyNFT'
 function App() {
   return (
     <React.Suspense >
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/chain">
             <Chain/>
+          </Route>
+          <Route exact path="/mynft">
+            <MyNFT/>
           </Route>
         </Switch>
       </Router>

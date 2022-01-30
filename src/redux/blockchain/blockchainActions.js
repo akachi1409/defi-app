@@ -48,10 +48,11 @@ export const connect = () => {
           method: "net_version",
         });
         // const NetworkData = await SmartContract.networks[networkId];
-        if (networkId == 43114) { // IMPORTANT. ONCE YOUR CONTRACT IS ON THE MAIN NET, SWITCH THIS NUMBER TO 1.
+        // 43114 for Avalanche
+        if (networkId == 3) { // IMPORTANT. ONCE YOUR CONTRACT IS ON THE MAIN NET, SWITCH THIS NUMBER TO 1.
           const SmartContractObj = new Web3EthContract(
             SmartContract,
-            "0xe9F8Ae2ddbe7b6ECc1e68699e2e9030278AeD2F0" // **IMPORTANT** PASTE CONTRACT ADDRESS HERE
+            "0xBDD99A18fEEd6245D732d4cBaFC7D48c4388Ecc6" // **IMPORTANT** PASTE CONTRACT ADDRESS HERE
           );
           dispatch(
             connectSuccess({
@@ -69,7 +70,7 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed("Change network to Avalanche."));
+          dispatch(connectFailed("Change network to Ropsten."));
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));

@@ -3,17 +3,7 @@
     "inputs": [
       {
         "internalType": "string",
-        "name": "_name",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_symbol",
-        "type": "string"
-      },
-      {
-        "internalType": "string",
-        "name": "_initBaseURI",
+        "name": "baseURI",
         "type": "string"
       }
     ],
@@ -115,16 +105,29 @@
     "type": "event"
   },
   {
-    "inputs": [
+    "inputs": [],
+    "name": "MAX_ENTRIES",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_paused",
+    "outputs": [
       {
         "internalType": "bool",
-        "name": "_state",
+        "name": "",
         "type": "bool"
       }
     ],
-    "name": "activateWhitelist",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -165,45 +168,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "baseExtension",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "baseURI",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "cost",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -217,6 +181,32 @@
         "internalType": "address",
         "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getMaxMint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -247,32 +237,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "maxMintAmount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "maxSupply",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -281,7 +245,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_mintAmount",
+        "name": "num",
         "type": "uint256"
       }
     ],
@@ -339,37 +303,11 @@
     "inputs": [
       {
         "internalType": "bool",
-        "name": "_state",
+        "name": "val",
         "type": "bool"
       }
     ],
     "name": "pause",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "paused",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address[]",
-        "name": "_user",
-        "type": "address[]"
-      }
-    ],
-    "name": "removeWhitelistUser",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -454,20 +392,7 @@
     "inputs": [
       {
         "internalType": "string",
-        "name": "_newBaseExtension",
-        "type": "string"
-      }
-    ],
-    "name": "setBaseExtension",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "_newBaseURI",
+        "name": "baseURI",
         "type": "string"
       }
     ],
@@ -480,11 +405,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_newCost",
+        "name": "_newMaxMint",
         "type": "uint256"
       }
     ],
-    "name": "setCost",
+    "name": "setMaxMint",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -493,55 +418,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_newmaxMintAmount",
+        "name": "_newPrice",
         "type": "uint256"
       }
     ],
-    "name": "setMaxMintAmount",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_newmaxMintAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_newWalletLimit",
-        "type": "uint256"
-      }
-    ],
-    "name": "setMaxMintAmountAndWalletLimit",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_newSupply",
-        "type": "uint256"
-      }
-    ],
-    "name": "setMaxSupply",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_newWalletLimit",
-        "type": "uint256"
-      }
-    ],
-    "name": "setWalletLimit",
+    "name": "setPrice",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -690,19 +571,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "walletLimit",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -723,52 +591,7 @@
   },
   {
     "inputs": [],
-    "name": "whitelistOnly",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address[]",
-        "name": "_user",
-        "type": "address[]"
-      }
-    ],
-    "name": "whitelistUser",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "whitelisted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "withdraw",
+    "name": "withdrawAll",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"

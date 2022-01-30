@@ -3,6 +3,8 @@ const initialState = {
   name: "",
   totalSupply: 0,
   cost: 0,
+  tokenIds: [],
+  tokenData:[],
   error: false,
   errorMsg: "",
 };
@@ -23,6 +25,8 @@ const dataReducer = (state = initialState, action) => {
         name: action.payload.name,
         totalSupply: action.payload.totalSupply,
         cost: action.payload.cost,
+        tokenIds: action.payload.tokenIds,
+        tokenData: action.payload.tokenData,
         error: false,
         errorMsg: "",
       };

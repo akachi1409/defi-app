@@ -31,18 +31,33 @@ export const fetchData = (account) => {
         .call();
       let totalSupply = await store
         .getState()
-        .blockchain.smartContract.methods.totalSupply()
+        .blockchain.smartContract.methods.balanceOf(account)
         .call();
-      let cost = await store
+      let cost = "";
+      let tokenIds = await store
         .getState()
-        .blockchain.smartContract.methods.cost()
+        .blockchain.smartContract.methods.walletOfOwner(account)
         .call();
+      let tokenData = []
+      for ( var index = 0 ; index<tokenIds.length; index++){
+        let temp = await store
+          .getState()
+          .blockchain.smartContract.methods.tokenURI(tokenIds[index])
+          .call();
+        tokenData.push(temp);
+      }
+      // let cost = await store
+      //   .getState()
+      //   .blockchain.smartContract.methods.cost()
+      //   .call();
 
       dispatch(
         fetchDataSuccess({
           name,
           totalSupply,
           cost,
+          tokenIds,
+          tokenData
         })
       );
     } catch (err) {
